@@ -1,24 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+//Importing components
+import { Emoji } from "./components/Emoji";
+import { Search } from "./components/Search";
+import { Header } from "./components/Header";
+//Importing assets;
+import "./assets/style/App.css";
 
 function App() {
+  const [value, setValue] = React.useState({});
+
+  //Handle the inputs from app.js to passing values to the child components through props;
+  const handleInputs = (input) => {
+    const inputName = input.target.name;
+    const inputValue = input.target.value;
+    //Using prevState parameter to keep the other input value stored;
+    setValue((prev) => {
+      return {
+        ...prev,
+        [inputName]: inputValue,
+      };
+    });
+  };
+
+  //Setting a default category if it doesn't exists;
+  React.useEffect(() => {
+    if (!value.category) {
+      setValue((prev) => {
+        return {
+          ...prev,
+          category: "Smileys & Emotion",
+        };
+      });
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App-body">
+      <Header/>
+      <Search handleInput={handleInputs} />
+      <Emoji search={value} />
+    </main>
   );
 }
 

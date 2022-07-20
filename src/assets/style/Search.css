@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+.search{
+    font-family: "Oxygen";
+    height: 25vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.input-group{
+    display:flex;
+}
+.search-input{
+    width: 300px !important;
+}
