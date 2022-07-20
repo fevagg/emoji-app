@@ -9,3 +9,7 @@ For this project, I used the emoji json provided by:
 *Supported languges:* 
 
 EN - 🇬🇧
+
+*Deployment:*
+
+https://fevagg.github.io/emoji-app/
