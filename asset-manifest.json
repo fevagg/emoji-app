@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/emoji-app/static/css/main.405fcc59.css",
-    "main.js": "/emoji-app/static/js/main.971e5013.js",
+    "main.css": "/emoji-app/static/css/main.9b1870bf.css",
+    "main.js": "/emoji-app/static/js/main.b26782ed.js",
+    "static/media/emoji-header.png": "/emoji-app/static/media/emoji-header.3546e09e64f46f7861f0.png",
     "index.html": "/emoji-app/index.html",
-    "main.405fcc59.css.map": "/emoji-app/static/css/main.405fcc59.css.map",
-    "main.971e5013.js.map": "/emoji-app/static/js/main.971e5013.js.map"
+    "main.9b1870bf.css.map": "/emoji-app/static/css/main.9b1870bf.css.map",
+    "main.b26782ed.js.map": "/emoji-app/static/js/main.b26782ed.js.map"
   },
   "entrypoints": [
-    "static/css/main.405fcc59.css",
-    "static/js/main.971e5013.js"
+    "static/css/main.9b1870bf.css",
+    "static/js/main.b26782ed.js"
   ]
 }
