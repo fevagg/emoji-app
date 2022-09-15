@@ -1,17 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
-
-.search{
-    font-family: "Oxygen";
-    height: 25vh;
-    width: 100vw;
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
+.search {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.input-group{
-    display:flex;
+.input-group {
+  font-family: "Oxygen";
+  font-weight: 400;
+  display: flex;
+  padding: 2em;
+  gap: 2em;
 }
-.search-input{
-    width: 300px !important;
+
+.search-input {
+  width: 24em !important;
+  height: 3em !important;
+  border-radius: 2em !important;
+  padding: 2em;
+  background-color: #c4663d44 !important;
+  color: #1a402e !important;
+}
+
+.category-input {
+  width: 10em !important;
+  height: 3em !important;
+  border-radius: 2em !important;
+  background-color: #c4663d44 !important;
+  color: #d34444 !important;
 }

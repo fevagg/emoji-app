@@ -1,17 +1,44 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600;700&display=swap");
-
 .title {
-  font-family: "Jost";
   font-weight: 700;
-  height: 25vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+}
+
+.header {
+  padding: 6em;
 }
 
 .subheader {
-  font-family: "Jost", sans-serif;
+  font-family: "Jost";
   font-weight: 400;
-  color: rgb(141, 141, 141);
+  font-size: 2em;
+  color: #1a402e;
+}
+
+.title-content {
+  font-family: "Jost";
+  font-weight: 700;
+  font-size: 6em;
+  color: #d34444;
+}
+
+.emoji-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.emoji-header figure img {
+  width: 14em;
+  filter: contrast(75%);
+}
+
+@media (max-width: 768px) {
+  .title {
+    text-align: center;
+  }
+  .row {
+    gap: 3em;
+  }
 }

@@ -4,8 +4,9 @@ import React from "react";
 import { Emoji } from "./components/Emoji";
 import { Search } from "./components/Search";
 import { Header } from "./components/Header";
-//Importing assets;
+
 import "./assets/style/App.css";
+import Footer from "./components/Footer";
 
 function App() {
   const [value, setValue] = React.useState({});
@@ -37,9 +38,10 @@ function App() {
 
   return (
     <main className="App-body">
-      <Header/>
+      <Header />
       <Search handleInput={handleInputs} />
       <Emoji search={value} />
+      <Footer />
     </main>
   );
 }

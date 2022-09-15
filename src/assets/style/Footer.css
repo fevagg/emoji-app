@@ -1,0 +1,18 @@
+footer {
+  font-family: "Jost";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 12em;
+  background-color: #c4663d44;
+}
+
+footer .col {
+  text-align: center;
+  color: #d34444 !important;
+  margin: 2em;
+}
+
+footer .col ul {
+  list-style: none;
+}

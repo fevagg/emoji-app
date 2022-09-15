@@ -1,17 +1,28 @@
 import * as React from "react";
-import { Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+
+import emoji from "../assets/img/emoji-header.png";
 
 import "../assets/style/Header.css";
+import Navigator from "./Navigator";
 
 export const Header = () => {
-    return(
-        <header className="title">
-            <Container>
-                <Row>
-                    <h3 className="title-content">Emoji App</h3>
-                    <h6 className="subheader">Search your favourite emoji!</h6>
-                </Row>
-            </Container>
-        </header>
-    )
+  return (
+    <>
+      <Navigator />
+      <Container className="header" as={"header"}>
+        <Row>
+          <Col className="emoji-header">
+            <figure>
+              <img alt="emoji-header" src={emoji} />
+            </figure>
+          </Col>
+          <Col className="title">
+            <h1 className="title-content">Found-ji</h1>
+            <h2 className="subheader">Search your favourite emoji!</h2>
+          </Col>
+        </Row>
+      </Container>
+    </>
+  );
 };

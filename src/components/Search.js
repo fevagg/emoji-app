@@ -1,13 +1,18 @@
 import * as React from "react";
 import { Form } from "react-bootstrap";
 import { Category } from "./Category";
-import "../assets/style/Search.css"
+import "../assets/style/Search.css";
 
 //Destructuring props parameter for practicality:
 export const Search = ({ handleInput }) => {
   //Handling submit to prevent default action;
   const handleSubmit = (e) => {
     e.preventDefault();
+  };
+
+  const scrollOnEmojiList = (e) => {
+    e.target.focus();
+    e.target.scrollIntoView();
   };
 
   return (
@@ -18,8 +23,9 @@ export const Search = ({ handleInput }) => {
             className="search-input"
             name="search"
             type="text"
-            placeholder="Enter an emoji name..."
+            placeholder="Smiling face..."
             onChange={handleInput}
+            onFocus={scrollOnEmojiList}
           />
           <Category handleCategory={handleInput} />
         </Form.Group>

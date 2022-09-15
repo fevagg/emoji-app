@@ -1,17 +1,31 @@
-.emojis {
-  height: 75vh;
-  width: 100vw;
-}
-
-.emoji-grid{
-    width:100%;
-    
+.emoji-grid {
+  padding: 4em;
+  padding-bottom: 8em;
 }
 
 .emoji {
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
   justify-content: space-around;
   height: 6em;
+  font-size: 2em;
+}
+
+.clipboard-btn {
+  text-align: center !important;
+  border-radius: 2em !important;
+  background-color: #d34444 !important;
+  border-color: #d34444 !important;
+  width: 6em !important;
+}
+
+.no-emojis {
+  font-family: "Oxygen", sans-serif;
+  height: 18em !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #d34444;
 }

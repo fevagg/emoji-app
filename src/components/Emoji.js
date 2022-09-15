@@ -1,7 +1,7 @@
 import * as React from "react";
 //Importing components
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { PencilSquare } from "react-bootstrap-icons";
+import { Clipboard } from "react-bootstrap-icons";
 //Data an assets;
 import RAW_EMOJI from "../json/emoji.json";
 import "../assets/style/Emoji.css";
@@ -36,14 +36,14 @@ export const Emoji = ({ search }) => {
   }, []);
 
   return (
-    <section className="emojis" id="emojis">
-      <Container>
+    <section id="emojis">
+      <Container className="emojis">
         <Row className="emoji-grid">
           {emojis.length > 0 ? (
             emojis.slice(0, 12).map((emoji) => (
               <Col
                 className="emoji"
-                xs={6}
+                xs={5}
                 md={3}
                 xl={2}
                 data-emoji={emoji.char}
@@ -51,17 +51,16 @@ export const Emoji = ({ search }) => {
                 key={emoji.codes}
               >
                 {emoji.char}
-                <Button onClick={handleClipboard}>
-                  <PencilSquare values={emoji.char} />
+                <Button className="clipboard-btn" onClick={handleClipboard}>
+                  <Clipboard values={emoji.char} />
                 </Button>
               </Col>
             ))
           ) : (
             <div
-              className="d-flex align-items-center justify-content-center"
-              style={{ height: "18em" }}
+              className="no-emojis"
             >
-              {`Sadly, we don't have that emoji here! \u{1F605}`}
+              <h3>{`Sadly, we don't have that emoji here! \u{1F605}`}</h3>
             </div>
           )}
         </Row>

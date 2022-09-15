@@ -17,6 +17,7 @@ export const Category = (props) => {
   return (
     <Form.Select
       name="category"
+      className="category-input"
       onChange={props.handleCategory}
       aria-label="Default select example"
     >
