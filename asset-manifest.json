@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/found-ji/static/css/main.00160d8d.css",
-    "main.js": "/found-ji/static/js/main.b0b94214.js",
+    "main.js": "/found-ji/static/js/main.7766fec5.js",
     "static/media/emoji-header.png": "/found-ji/static/media/emoji-header.3546e09e64f46f7861f0.png",
     "index.html": "/found-ji/index.html",
     "main.00160d8d.css.map": "/found-ji/static/css/main.00160d8d.css.map",
-    "main.b0b94214.js.map": "/found-ji/static/js/main.b0b94214.js.map"
+    "main.7766fec5.js.map": "/found-ji/static/js/main.7766fec5.js.map"
   },
   "entrypoints": [
     "static/css/main.00160d8d.css",
-    "static/js/main.b0b94214.js"
+    "static/js/main.7766fec5.js"
   ]
 }
