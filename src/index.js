@@ -15,8 +15,8 @@ import ErrorPage from "./pages/Error/Error";
 const router = createBrowserRouter([
   {
     element: <Layout />,
-    path: "/",
-    errorElement: <ErrorPage/>,
+    path: "/found-ji",
+    errorElement: <ErrorPage />,
     children: [
       {
         element: <Home />,
@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         path: "emojis",
       },
       {
-        path: "/emojis/:emojiUnicode",
+        path: "emojis/:emojiUnicode",
         element: <SelectedEmoji />,
       },
     ],
