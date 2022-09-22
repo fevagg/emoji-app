@@ -1,14 +1,15 @@
 import React from "react";
 
 //Importing components
-import { Emoji } from "./components/Emoji";
-import { Search } from "./components/Search";
-import { Header } from "./components/Header";
+import EmojiList from "../../components/EmojiList/EmojiList";
+import Search from "../../components/Search/Search";
+import Header from "../../components/Header/Header";
+import { Col } from "react-bootstrap";
 
-import "./assets/style/App.css";
-import Footer from "./components/Footer";
+import "./Home.css";
+import emoji from "../../assets/img/emoji-header.png";
 
-function App() {
+const Home = () => {
   const [value, setValue] = React.useState({});
 
   //Handle the inputs from app.js to passing values to the child components through props;
@@ -34,16 +35,25 @@ function App() {
         };
       });
     }
-  }, []);
+  }, [value.category]);
 
   return (
-    <main className="App-body">
-      <Header />
+    <>
+      <Header className="home-header">
+        <Col className="emoji-header">
+          <figure>
+            <img alt="emoji-header" src={emoji} />
+          </figure>
+        </Col>
+        <Col className="title">
+          <h1 className="title-content">Found-ji</h1>
+          <h2 className="subheader">Search your favourite emoji!</h2>
+        </Col>
+      </Header>
       <Search handleInput={handleInputs} />
-      <Emoji search={value} />
-      <Footer />
-    </main>
+      <EmojiList search={value} cutted />
+    </>
   );
-}
+};
 
-export default App;
+export default Home;

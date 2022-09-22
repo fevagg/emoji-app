@@ -1,0 +1,19 @@
+.selected-emoji {
+  height: 32em;
+}
+
+.selected-emoji .row {
+  height: inherit;
+  color: #d34444;
+}
+.selected-emoji .row .col-xl-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.selected-emoji .row .col-xl-6 .emoji {
+  height: 2em;
+  font-size: 3em;
+}

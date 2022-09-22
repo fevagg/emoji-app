@@ -1,12 +1,43 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './assets/style/index.css';
-import App from './App';
-import "bootstrap/dist/css/bootstrap.min.css"
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Home from "./pages/Home/Home";
+import Layout from "./components/Layout";
+import About from "./pages/About/About";
+import SelectedEmoji from "./pages/SelectedEmoji/SelectedEmoji";
+import AllEmojis from "./pages/Emojis/AllEmojis";
+
+import "./index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import ErrorPage from "./pages/Error/Error";
+
+const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    path: "/",
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+        element: <Home />,
+        path: "",
+      },
+      { element: <About />, path: "about" },
+      {
+        element: <AllEmojis />,
+        path: "emojis",
+      },
+      {
+        path: "/emojis/:emojiUnicode",
+        element: <SelectedEmoji />,
+      },
+    ],
+  },
+]);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

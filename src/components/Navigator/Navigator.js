@@ -2,7 +2,8 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import "../assets/style/Navigator.css"
+import { Link } from "react-router-dom";
+import "./Navigator.css";
 
 const Navigator = () => {
   return (
@@ -11,15 +12,15 @@ const Navigator = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto nav">
-            <Nav.Link href="#home">
-            🏠 Home
-            </Nav.Link>
-            <Nav.Link href="#features">
-            🧑🏻 About
-            </Nav.Link>
-            <Nav.Link href="#pricing">
-            🤣 Emojis
-            </Nav.Link>
+            <Link className="nav-link" to={"/"}>
+              🏠 Home
+            </Link>
+            <Link className="nav-link" to={"/about"}>
+              🧑🏻 About
+            </Link>
+            <Link className="nav-link" to={"/emojis"}>
+              🤣 Emojis
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Form } from "react-bootstrap";
+import "./Category.css";
 
 const categories = [
   "Smileys & Emotion",
@@ -13,12 +14,12 @@ const categories = [
   "Flags",
 ];
 
-export const Category = (props) => {
+const Category = ({ handleCategory }) => {
   return (
     <Form.Select
       name="category"
       className="category-input"
-      onChange={props.handleCategory}
+      onChange={handleCategory}
       aria-label="Default select example"
     >
       {categories &&
@@ -30,3 +31,5 @@ export const Category = (props) => {
     </Form.Select>
   );
 };
+
+export default Category;

@@ -1,0 +1,14 @@
+.emoji-grid {
+  padding: 4em;
+  padding-bottom: 8em;
+}
+
+.no-emojis {
+  font-family: "Oxygen", sans-serif;
+  height: 18em !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #d34444;
+}

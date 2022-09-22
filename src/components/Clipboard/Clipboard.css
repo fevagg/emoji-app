@@ -1,0 +1,17 @@
+.clipboard-btn {
+  text-align: center !important;
+  border-radius: 2em !important;
+  background-color: #d34444 !important;
+  border-color: #d34444 !important;
+  width: 6em !important;
+}
+
+.clipboard-btn:focus {
+  box-shadow: 0px 0px 2px 2px rgba(136, 46, 46, 1) !important;
+}
+
+.clipboard-btn:active {
+  background-color: #882e2e !important;
+  border-color: #882e2e !important;
+  box-shadow: 0px 0px 1px 1px rgba(136, 46, 46, 1) !important;
+}
